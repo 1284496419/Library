@@ -1,0 +1,13 @@
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\bin\Debug\图书管理系统.exe.config
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\bin\Debug\图书管理系统.exe
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\bin\Debug\图书管理系统.pdb
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.csprojAssemblyReference.cache
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.Properties.Resources.resources
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.csproj.GenerateResource.cache
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.csproj.CoreCompileInputs.cache
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.exe
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.pdb
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.Frm2.resources
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.Frm1.resources
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.Frm3.resources
+F:\图书管理系统文件夹\图书管理系统\图书管理系统\obj\Debug\图书管理系统.frm4.resources
