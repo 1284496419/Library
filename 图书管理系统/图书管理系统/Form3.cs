@@ -31,27 +31,27 @@ namespace 图书管理系统
         {
             bool c = false;
             bool d = false;
-            string[] a= File.ReadAllLines(@"F:\账号.txt");
-            string[] sa = File.ReadAllLines(@"F:\管理员账号.txt");
+            string[] a= File.ReadAllLines(@"账号");
+            string[] sa = File.ReadAllLines(@"密码");
             for (int b=0; b<a.Length;b++)
             {
-                if(textBox1.Text=="a[b]")
+                if(textBox1.Text==a[b])
                 {
                     c = true;
-                    MessageBox.Show("你的密码是" + sa[b]);
+                    MessageBox.Show("你的密码是" + a[b]);
                     break;
                 }
             }
             for (int b = 0; b < sa.Length; b++)
             {
-                if (textBox1.Text == "sa[b]")
+                if (textBox1.Text == sa[b])
                 {
                     d = true;
                     MessageBox.Show("你的密码是" + sa[b]);
                     break;
                 }
             }
-            if(d==false)
+            if(d==false&&c==false)
             {
                 MessageBox.Show("你怕不是来盗号的哦","没有该账号");
             }
@@ -64,7 +64,7 @@ namespace 图书管理系统
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (MessageBox.Show("返回登录界面", "", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("返回登录界面", "hh", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 Frm1.pFrm1.Show();
             }

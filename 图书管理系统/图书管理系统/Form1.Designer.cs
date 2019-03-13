@@ -64,6 +64,7 @@
             // 
             // btnexit
             // 
+            this.btnexit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnexit.Location = new System.Drawing.Point(75, 352);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(250, 43);
@@ -129,12 +130,6 @@
             this.label1.Text = "账号：";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // label3
-            // 
-            // 
-            // label4
-            // 
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -157,8 +152,10 @@
             // 
             // Frm1
             // 
+            this.AcceptButton = this.but1login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnexit;
             this.ClientSize = new System.Drawing.Size(394, 442);
             this.Controls.Add(this.but1login);
             this.Controls.Add(this.label6);

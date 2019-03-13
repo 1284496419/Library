@@ -44,8 +44,8 @@ namespace 图书管理系统
         private void button1_Click(object sender, EventArgs e)
         {
             Frm2 frm2 = new Frm2();
-            string[] zh = File.ReadAllLines(@"F:\账号.txt");
-            string[] mm = File.ReadAllLines(@"F:\密码.txt");
+            string[] zh = File.ReadAllLines(@"账号.txt");
+            string[] mm = File.ReadAllLines(@"密码.txt");
             bool b = false;
             if (textBox1.TextLength == 0 || textBox2.TextLength == 0)
             {
@@ -111,11 +111,6 @@ namespace 图书管理系统
 
         private void label5_Click(object sender, EventArgs e)
         {
-            if (label5.Text == "请输入账号")
-            {
-                if(MessageBox.Show("来个账号？","注册账号",MessageBoxButtons.OKCancel)== DialogResult.OK)
-                btnregister_Click(sender, e);
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -130,11 +125,11 @@ namespace 图书管理系统
             frm3.Show();
         }
 
-        private void butmaster_Click(object sender, EventArgs e)
+        public void butmaster_Click(object sender, EventArgs e)
         {
             Frm2 frm2 = new Frm2();
-            string[] szh = File.ReadAllLines(@"F:\管理员账号.txt");
-            string[] smm = File.ReadAllLines(@"F:\管理员密码.txt");
+            string[] szh = File.ReadAllLines(@"账号.txt");
+            string[] smm = File.ReadAllLines(@"密码.txt");
             bool b = false;
             for (int a = 0; a < szh.Length; a++)
             {

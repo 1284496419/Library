@@ -84,37 +84,18 @@ namespace 图书管理系统
         {
             if(textBox2.Text.Length < 15 && textBox2.Text.Length > 6&& textBox1.Text.Length < 11 && textBox2.Text.Length > 6&& textBox3.Text == textBox2.Text)
             {
-                if (!File.Exists(@"F:\管理员账号.txt"))
+                if (!File.Exists(@"账号.txt"))
                 {
-                    FileStream fs1 = new FileStream(@"F:\管理员账号.txt", FileMode.Create,FileAccess.Write);//创建写入文件
+                    FileStream fs1 = new FileStream(@"账号.txt", FileMode.Create, FileAccess.Write);//创建写入文件
                     fs1.Close();
                 }
-                if (!File.Exists(@"F:\密码.txt"))
+                if (!File.Exists(@"密码.txt"))
                 {
-                    FileStream fs1 = new FileStream(@"F:\密码.txt", FileMode.Create, FileAccess.Write);//创建写入文件
+                    FileStream fs1 = new FileStream(@"密码.txt", FileMode.Create, FileAccess.Write);//创建写入文件
                     fs1.Close();
                 }
-                if (!File.Exists(@"F:\管理员密码.txt"))
-                {
-                    FileStream fs1 = new FileStream(@"F:\管理员密码.txt", FileMode.Create, FileAccess.Write);//创建写入文件
-                    fs1.Close();
-                }
-                if (!File.Exists(@"F:\账号.txt"))
-                {
-                    FileStream fs1 = new FileStream(@"F:\账号.txt", FileMode.Create, FileAccess.Write);//创建写入文件
-                    fs1.Close();
-                }
-                string[] gline = File.ReadAllLines(@"F:\管理员账号.txt");
-                string[] line = File.ReadAllLines(@"F:\账号.txt");
+                string[] line = File.ReadAllLines(@"账号.txt");
                 bool x = true;
-                for(int a=0; a<gline.Length;a++)
-                {
-                    if (textBox1.Text == gline[a])
-                    {
-                        x = false;
-                        break;
-                    }
-                }
                 for (int a = 0; a < line.Length; a++)
                 {
                     if (textBox1.Text == line[a])
@@ -125,11 +106,11 @@ namespace 图书管理系统
                 }
                 if(x)
                 {
-                    StreamWriter fs = new StreamWriter(@"F:\账号.txt", true);//文件
+                    StreamWriter fs = new StreamWriter(@"账号.txt", true);//文件
                     fs.WriteLine(textBox1.Text);
                     //开始写入
                     fs.Close();
-                    StreamWriter fs1 = new StreamWriter(@"F:\密码.txt", true);//文件
+                    StreamWriter fs1 = new StreamWriter(@"密码.txt", true);//文件
                     fs1.WriteLine(textBox2.Text);
                     //开始写入
                     fs1.Close();

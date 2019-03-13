@@ -12,8 +12,10 @@ namespace 图书管理系统
 {
     public partial class Frm2 : Form
     {
+        public static Frm2 pFrm2 = null;
         public Frm2()
         {
+            pFrm2 = this;
             InitializeComponent();
         }
 
