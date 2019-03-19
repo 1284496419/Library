@@ -1,6 +1,6 @@
 ﻿namespace 图书管理系统
 {
-    partial class Frm3
+    partial class Frm2
     {
         /// <summary>
         /// Required designer variable.
@@ -143,7 +143,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Frm3
+            // Frm2
             // 
             this.AcceptButton = this.btn1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -161,7 +161,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Frm3";
+            this.Name = "Frm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "注册账号";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm3_FormClosed);

@@ -86,14 +86,26 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="图书列表.cs">
+    <Compile Include="Form7.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="图书列表.Designer.cs">
-      <DependentUpon>图书列表.cs</DependentUpon>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm4.Designer.cs">
+      <DependentUpon>Frm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm5.Designer.cs">
+      <DependentUpon>Frm5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +114,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm4.resx">
+      <DependentUpon>Frm4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm5.resx">
+      <DependentUpon>Frm5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,9 +133,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="图书列表.resx">
-      <DependentUpon>图书列表.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\DataSources\Frm1.datasource" />
     <None Include="Properties\DataSources\Frm2.datasource" />
     <None Include="Properties\DataSources\Frm3.datasource" />

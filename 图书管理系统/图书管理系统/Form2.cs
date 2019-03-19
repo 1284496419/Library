@@ -11,9 +11,9 @@ using System.IO;
 
 namespace 图书管理系统
 {
-    public partial class Frm3 : Form
+    public partial class Frm2 : Form
     {
-        public Frm3()
+        public Frm2()
         {
             InitializeComponent();
         }

@@ -28,7 +28,7 @@ namespace 图书管理系统
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            panel1.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -43,14 +43,14 @@ namespace 图书管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Frm2 frm2 = new Frm2();
+            Frm4 frm4 = new Frm4();
             string[] zh = File.ReadAllLines(@"账号.txt");
             string[] mm = File.ReadAllLines(@"密码.txt");
             bool b = false;
-            if (textBox1.TextLength == 0 || textBox2.TextLength == 0)
+            if (textBox账号.TextLength == 0 || textBox2.TextLength == 0)
             {
                 MessageBox.Show("请输入账号或密码");
-                if (textBox1.TextLength == 0)
+                if (textBox账号.TextLength == 0)
                 {
                     label5.Text = "请输入账号";
                 }
@@ -62,7 +62,7 @@ namespace 图书管理系统
             }
             for (int a = 0; a < zh.Length; a++)
             {
-                if (textBox1.Text == zh[a] && textBox2.Text == mm[a])
+                if (textBox账号.Text == zh[a] && textBox2.Text == mm[a])
                 {
                     b = true;
                     break;
@@ -70,7 +70,7 @@ namespace 图书管理系统
             }
             if (b)
             {
-                frm2.Show();
+                frm4.Show();
                 this.Hide();
             }
             else
@@ -98,13 +98,13 @@ namespace 图书管理系统
 
         private void label6_Click(object sender, EventArgs e)
         {
-            Frm4 frm4 = new Frm4();
+            Frm3 frm3 = new Frm3();
             if (label6.Text == "密码忘了吗")
             {
                 if (MessageBox.Show("去找密码？", "找回密码", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     this.Hide();
-                    frm4.Show();
+                    frm3.Show();
                 }   
             }
         }
@@ -120,34 +120,35 @@ namespace 图书管理系统
 
         public void btnregister_Click(object sender, EventArgs e)
         {
-            Frm3 frm3 = new Frm3();
+            Frm2 frm2 = new Frm2();
             this.Hide();
-            frm3.Show();
+            frm2.Show();
         }
 
         public void butmaster_Click(object sender, EventArgs e)
         {
-            Frm2 frm2 = new Frm2();
-            string[] szh = File.ReadAllLines(@"账号.txt");
-            string[] smm = File.ReadAllLines(@"密码.txt");
-            bool b = false;
-            for (int a = 0; a < szh.Length; a++)
+            panel1.Show();
+            MessageBox.Show("请输入管理员密码");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Frm6 frm6 = new Frm6();
+            if(textBox3.Text=="awsl")
             {
-                if (textBox1.Text == szh[a] && textBox2.Text == smm[a])
-                {
-                    b = true;
-                    break;
-                }
-            }
-            if (b)
-            {
-                vip = true;
-                frm2.Show();
                 this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("账号或密码错误");
+                frm6.Show();
+                panel1.Hide();
             }
         }
     }

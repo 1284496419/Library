@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace 图书管理系统
 {
-    public partial class Frm4 : Form
+    public partial class Frm3 : Form
     {
-        public Frm4()
+        public Frm3()
         {
             InitializeComponent();
         }
