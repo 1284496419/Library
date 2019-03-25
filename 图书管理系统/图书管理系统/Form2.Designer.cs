@@ -43,6 +43,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Location = new System.Drawing.Point(110, 80);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 21);
@@ -51,15 +52,18 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(51, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 1;
             this.label1.Text = "注册账号";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Location = new System.Drawing.Point(110, 137);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -69,6 +73,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(63, 140);
             this.label2.Name = "label2";
@@ -79,6 +84,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Location = new System.Drawing.Point(110, 194);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
@@ -88,6 +94,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(51, 197);
             this.label3.Name = "label3";
@@ -97,6 +104,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(270, 83);
             this.label4.Name = "label4";
@@ -106,6 +114,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(270, 140);
             this.label5.Name = "label5";
@@ -115,15 +124,18 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(270, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(11, 12);
             this.label6.TabIndex = 8;
             this.label6.Text = " ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btn1
             // 
+            this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn1.Location = new System.Drawing.Point(125, 257);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(160, 60);
@@ -134,6 +146,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Location = new System.Drawing.Point(125, 346);
             this.button1.Name = "button1";
@@ -165,6 +178,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "注册账号";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm3_FormClosed);
+            this.Load += new System.EventHandler(this.Frm2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

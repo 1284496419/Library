@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,54 +50,60 @@
             // 
             // but1login
             // 
+            this.but1login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.but1login.Location = new System.Drawing.Point(75, 220);
             this.but1login.Name = "but1login";
             this.but1login.Size = new System.Drawing.Size(102, 42);
-            this.but1login.TabIndex = 0;
+            this.but1login.TabIndex = 2;
             this.but1login.Text = "登录";
             this.but1login.UseVisualStyleBackColor = true;
             this.but1login.Click += new System.EventHandler(this.button1_Click);
             // 
             // butmaster
             // 
+            this.butmaster.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.butmaster.Location = new System.Drawing.Point(223, 220);
             this.butmaster.Name = "butmaster";
             this.butmaster.Size = new System.Drawing.Size(102, 42);
-            this.butmaster.TabIndex = 1;
+            this.butmaster.TabIndex = 3;
             this.butmaster.Text = "管理员登录";
             this.butmaster.UseVisualStyleBackColor = true;
             this.butmaster.Click += new System.EventHandler(this.butmaster_Click);
             // 
             // btnexit
             // 
+            this.btnexit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnexit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnexit.Location = new System.Drawing.Point(75, 352);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(250, 43);
-            this.btnexit.TabIndex = 2;
+            this.btnexit.TabIndex = 5;
             this.btnexit.Text = "退出";
             this.btnexit.UseVisualStyleBackColor = true;
             this.btnexit.Click += new System.EventHandler(this.Btnexit_Click);
             // 
             // textBox账号
             // 
+            this.textBox账号.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox账号.Location = new System.Drawing.Point(156, 121);
             this.textBox账号.Name = "textBox账号";
             this.textBox账号.Size = new System.Drawing.Size(146, 21);
-            this.textBox账号.TabIndex = 3;
+            this.textBox账号.TabIndex = 0;
             this.textBox账号.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Location = new System.Drawing.Point(156, 165);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(146, 21);
-            this.textBox2.TabIndex = 4;
+            this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(100, 165);
@@ -108,16 +115,18 @@
             // 
             // btnregister
             // 
+            this.btnregister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnregister.Location = new System.Drawing.Point(75, 283);
             this.btnregister.Name = "btnregister";
             this.btnregister.Size = new System.Drawing.Size(250, 43);
-            this.btnregister.TabIndex = 10;
+            this.btnregister.TabIndex = 4;
             this.btnregister.Text = "注册账号";
             this.btnregister.UseVisualStyleBackColor = true;
             this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(394, 101);
@@ -126,6 +135,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(101, 124);
@@ -137,6 +147,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(308, 128);
             this.label5.Name = "label5";
@@ -147,6 +158,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(308, 173);
             this.label6.Name = "label6";
@@ -157,6 +169,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label3);
@@ -166,10 +179,23 @@
             this.panel1.Size = new System.Drawing.Size(394, 442);
             this.panel1.TabIndex = 17;
             // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(213, 239);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(89, 38);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "返回";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(211, 205);
+            this.button1.Location = new System.Drawing.Point(75, 239);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 38);
             this.button1.TabIndex = 2;
@@ -179,6 +205,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox3.Location = new System.Drawing.Point(142, 157);
@@ -190,6 +217,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(72, 121);
@@ -201,9 +229,9 @@
             // 
             // Frm1
             // 
-            this.AcceptButton = this.but1login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.CancelButton = this.btnexit;
             this.ClientSize = new System.Drawing.Size(394, 442);
             this.Controls.Add(this.panel1);
@@ -220,7 +248,8 @@
             this.Controls.Add(this.butmaster);
             this.Name = "Frm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "    ";
+            this.Text = "图书管理系统客户端";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -247,6 +276,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -77,12 +77,13 @@ namespace 图书管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Frm1.pFrm1.Show();
+            this.Hide();
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if(textBox2.Text.Length < 15 && textBox2.Text.Length > 6&& textBox1.Text.Length < 11 && textBox2.Text.Length > 6&& textBox3.Text == textBox2.Text)
+            if(textBox2.Text.Length < 15 && textBox2.Text.Length > 6&& textBox1.Text.Length < 11 && textBox2.Text.Length > 6&& textBox3.Text == textBox2.Text&& textBox1.Text.Length >6)
             {
                 if (!File.Exists(@"账号.txt"))
                 {
@@ -115,7 +116,8 @@ namespace 图书管理系统
                     //开始写入
                     fs1.Close();
                     MessageBox.Show("前往登录界面");
-                    this.Close();
+                    this.Hide();
+                    Frm1.pFrm1.Show();
                 }
                 else
                 {
@@ -140,7 +142,22 @@ namespace 图书管理系统
 
         private void Frm3_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Frm1.pFrm1.Show();
+            Application.Exit();
+        }
+
+        private void Frm2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

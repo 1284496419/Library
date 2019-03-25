@@ -13,13 +13,14 @@ namespace 图书管理系统
 {
     public partial class Frm1 : Form
     {
-        public bool vip = false;
         public static Frm1 pFrm1 = null;
         public Frm1()
         {
             pFrm1 = this;
             InitializeComponent();
         }
+
+        public static string name;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -28,7 +29,46 @@ namespace 图书管理系统
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (!File.Exists(@"账号.txt"))
+            {
+                FileStream fs1 = new FileStream(@"账号.txt", FileMode.Create, FileAccess.Write);//创建写入文件
+                fs1.Close();
+            }
+            if (!File.Exists(@"密码.txt"))
+            {
+                FileStream fs1 = new FileStream(@"密码.txt", FileMode.Create, FileAccess.Write);//创建写入文件
+                fs1.Close();
+            }
+            if (!File.Exists(@"书籍信息.txt"))
+            {
+                FileStream fs1 = new FileStream(@"书籍信息.txt", FileMode.Create, FileAccess.Write);//创建写入文件
+                fs1.Close();
+            }
+            if (!File.Exists(@"借书记录.txt"))
+            {
+                FileStream fs1 = new FileStream(@"借书记录.txt", FileMode.Create, FileAccess.Write);//创建写入文件
+                fs1.Close();
+            }
+
             panel1.Hide();
+
+            FileInfo fileInfo = new FileInfo(@"账号.txt");
+            fileInfo.Attributes |= FileAttributes.Hidden;
+            FileInfo fileInfo1 = new FileInfo(@"密码.txt");
+            fileInfo1.Attributes |= FileAttributes.Hidden;
+            FileInfo fileInfo2 = new FileInfo(@"书籍信息.txt");
+            fileInfo2.Attributes |= FileAttributes.Hidden;
+            FileInfo fileInfo3 = new FileInfo(@"借书记录.txt");
+            fileInfo3.Attributes |= FileAttributes.Hidden;
+
+            //string filePath = @"账号.txt";
+            //FileAttributes fileAttributes = File.GetAttributes(filePath);
+            //string filePath1 = @"密码.txt";
+            //FileAttributes fileAttributes1 = File.GetAttributes(filePath1);
+            //string filePath2 = @"书籍信息.txt";
+            //FileAttributes fileAttributes2 = File.GetAttributes(filePath2);
+            //string filePath3 = @"借书记录.txt";
+            //FileAttributes fileAttributes3 = File.GetAttributes(filePath3);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -43,7 +83,6 @@ namespace 图书管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Frm4 frm4 = new Frm4();
             string[] zh = File.ReadAllLines(@"账号.txt");
             string[] mm = File.ReadAllLines(@"密码.txt");
             bool b = false;
@@ -70,6 +109,8 @@ namespace 图书管理系统
             }
             if (b)
             {
+                name = textBox账号.Text;
+                Frm4 frm4 = new Frm4();
                 frm4.Show();
                 this.Hide();
             }
@@ -98,11 +139,11 @@ namespace 图书管理系统
 
         private void label6_Click(object sender, EventArgs e)
         {
-            Frm3 frm3 = new Frm3();
             if (label6.Text == "密码忘了吗")
             {
                 if (MessageBox.Show("去找密码？", "找回密码", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
+                    Frm3 frm3 = new Frm3();
                     this.Hide();
                     frm3.Show();
                 }   
@@ -143,13 +184,24 @@ namespace 图书管理系统
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Frm6 frm6 = new Frm6();
             if(textBox3.Text=="awsl")
             {
+                Frm6 frm6 = new Frm6();
                 this.Hide();
                 frm6.Show();
                 panel1.Hide();
             }
+        }
+
+        private void Frm1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
         }
     }
 }

@@ -59,10 +59,16 @@ namespace 图书管理系统
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Frm1.pFrm1.Show();
             this.Close();
         }
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Frm3_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("返回登录界面", "hh", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {

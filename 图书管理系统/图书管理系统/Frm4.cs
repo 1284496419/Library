@@ -20,14 +20,8 @@ namespace 图书管理系统
 
         public void button2_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(@"书籍信息.txt"))
-            {
-                FileStream fs1 = new FileStream(@"书籍信息.txt", FileMode.Create, FileAccess.Write);//创建写入文件
-                fs1.Close();
-            }
-
             StreamReader read = new StreamReader(@"书籍信息.txt", Encoding.GetEncoding("gb2312"));
-            //创建一个DATATABLE
+            //创建一个DATATABL
             DataTable dt = new DataTable();
             dt.Columns.Add("书名", typeof(String));
             dt.Columns.Add("编号", typeof(String));
@@ -45,11 +39,14 @@ namespace 图书管理系统
                 dt.Rows.Add(dr);
             }
             this.dataGridView1.DataSource = dt;
+            read.Close();
         }
 
         private void Frm4_Load(object sender, EventArgs e)
         {
             MessageBox.Show("点击刷新显示书籍哦", "提示");
+            panel1.Show();
+            label2.Text += Frm1.name;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,25 +61,95 @@ namespace 图书管理系统
                 bh[a] = str[1];
                 a++;
             }
+            read.Close();
+            //检查是否已借出
+            StreamReader read1 = new StreamReader(@"借书记录.txt", Encoding.Default, false);
+            string line1 = "";
+            string[] zk= new string[100];
+            string[] bh1 = new string[100];
+            bool flag = true;
+            bool flag1 = false;
+            int a1 = 0;
+            while ((line1 = read1.ReadLine()) != null)
+            {
+                string[] str = line1.Split('-');
+                bh1[a1] = str[1];
+                zk[a1] = str[2];
+                a1++;
+            }
+            for (int b = 0; b < a; b++)
+            {
+                if (textBox1.Text == bh1[b]&&zk[b]== "N")
+                {
+                    flag1 = true;
+                    flag = false;
+                    break;
+                }
+            }
+            read1.Close();
+            //检查是否有这本书
             bool x = true;
-            for(int b =0; b<a-1 ;b++ )
+            for(int b =0; b<a ;b++ )
             {
                 if(textBox1.Text==bh[b])
                 {
-                    MessageBox.Show("你可以去拿书了", "成功");
                     x = false;
-                   break;
+                    if (flag)
+                    {
+                        MessageBox.Show("你可以去拿书了", "成功");
+                        StreamWriter fs = new StreamWriter(@"借书记录.txt", true);//文件
+                        fs.WriteLine(Frm1.name + '-' + textBox1.Text + '-' + "N");
+                        //开始写入
+                        fs.Close();
+                        break;
+                    }
                 }
             }
             if(x)
             {
                 MessageBox.Show("还没有这本书", "失败");
             }
+            if(flag1)
+            {
+                MessageBox.Show("这本书已经借出，过一段时间再来吧", "失败");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            panel1.Show();
+        }
+
+        private void Frm4_FontChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frm4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
             this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
+            this.Hide();
         }
     }
 }
