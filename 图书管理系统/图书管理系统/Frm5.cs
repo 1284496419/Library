@@ -148,7 +148,6 @@ namespace 图书管理系统
             else
             {
                 MessageBox.Show("成功删除", "成功");
-
                 StreamWriter fs1 = new StreamWriter(@"书籍信息.txt", false);
                 fs1.Write("");
                 fs1.Close();

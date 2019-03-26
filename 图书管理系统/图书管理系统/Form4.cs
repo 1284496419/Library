@@ -57,16 +57,19 @@ namespace 图书管理系统
             if(flag)
             {
                 MessageBox.Show("成功归还", "成功");
-                StreamWriter fs1 = new StreamWriter(@"借书记录.txt", false);
-                fs1.Write("");
-                fs1.Close();
-                StreamWriter fs = new StreamWriter(@"借书记录.txt", true);//文件
+                string path = @"借书记录.txt";
+                System.IO.File.WriteAllText(@"借书记录.txt", string.Empty);
+                FileStream fs = new FileStream(path, FileMode.Append);//文本加入不覆盖
+                StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.Default);//转码
                 for (int b = 0; b < a1; b++)
                 {
                     string h = yh[b] + '-' + bh[b] + '-' + zk[b];
-                    fs.WriteLine(h);
-                        //开始写入
+                    sw.WriteLine(h);
                 }
+                //清空缓冲区
+                sw.Flush();
+                //关闭流
+                sw.Close();
                 fs.Close();
             }
             else

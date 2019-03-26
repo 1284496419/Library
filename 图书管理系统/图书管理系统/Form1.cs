@@ -52,14 +52,14 @@ namespace 图书管理系统
 
             panel1.Hide();
 
-            FileInfo fileInfo = new FileInfo(@"账号.txt");
-            fileInfo.Attributes |= FileAttributes.Hidden;
-            FileInfo fileInfo1 = new FileInfo(@"密码.txt");
-            fileInfo1.Attributes |= FileAttributes.Hidden;
-            FileInfo fileInfo2 = new FileInfo(@"书籍信息.txt");
-            fileInfo2.Attributes |= FileAttributes.Hidden;
-            FileInfo fileInfo3 = new FileInfo(@"借书记录.txt");
-            fileInfo3.Attributes |= FileAttributes.Hidden;
+            //FileInfo fileInfo = new FileInfo(@"账号.txt");
+            //fileInfo.Attributes |= FileAttributes.Hidden;
+            //FileInfo fileInfo1 = new FileInfo(@"密码.txt");
+            //fileInfo1.Attributes |= FileAttributes.Hidden;
+            //FileInfo fileInfo2 = new FileInfo(@"书籍信息.txt");
+            //fileInfo2.Attributes |= FileAttributes.Hidden;
+            //FileInfo fileInfo3 = new FileInfo(@"借书记录.txt");
+            //fileInfo3.Attributes |= FileAttributes.Hidden;
 
             //string filePath = @"账号.txt";
             //FileAttributes fileAttributes = File.GetAttributes(filePath);
